@@ -35,6 +35,12 @@ There is also a compiled executable which run under Arch Linux (and
 probably every other distro). Since it's not statically compiled, you'll
 need the newt library on your computer to make it work.
 
+## Installation
+
+Copy the executable to wherever you like, probably `/usr/local/bin`. Copy
+the config file (with modifications for your purposes) to where it should
+go (see above).
+
 ## Bugs
 
 If you find one, let me know.

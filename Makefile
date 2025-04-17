@@ -20,9 +20,9 @@ ini.o : ini.h ini.c
 
 config.o : config.h config.c
 
-nremind.o : nremind.c
+nremadd.o : nremadd.c
 
-nremind : nremind.o config.o ini.o
-	$(LINK) $(LFLAGS) -o $@ ini.o config.o nremind.o -lnewt
+nremadd : nremadd.o config.o ini.o
+	$(LINK) $(LFLAGS) -o $@ ini.o config.o nremadd.o -lnewt
 
 

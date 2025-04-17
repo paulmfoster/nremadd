@@ -10,7 +10,7 @@ static int handler(void* user, const char* section, const char* name, const char
 {
     CONFIG *p = (CONFIG *) user;
 
-    if (strcmp(section, "nremind") == 0) {
+    if (strcmp(section, "nremadd") == 0) {
         if (strcmp(name, "general") == 0)
             p->general = strdup(value);
         else if (strcmp(name, "personal") == 0) 
@@ -38,7 +38,7 @@ int read_config()
     char cfgfile[255];
 
     home = getenv("HOME");
-    sprintf(cfgfile, "%s/%s", home, ".config/nremind/nremind.cfg");
+    sprintf(cfgfile, "%s/%s", home, ".config/nremadd/nremadd.cfg");
 
     // safety of config
     cfg.general = NULL;

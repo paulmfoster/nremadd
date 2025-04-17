@@ -4,9 +4,9 @@ author: Paul M. Foster
 date: 2025-04-16
 ---
 
-# NRemind
+# NRemAdd
 
-NRemind is a newt-based front end for adding simple events to `remind(1)`.
+NRemadd is a newt-based front end for adding simple events to `remind(1)`.
 If you want to add oddly repeating events, or events which depend on phases
 of the moon or something, this program will not work. It asks for a date
 and a number of days in advance to warn you about the event (may be 0).
@@ -17,8 +17,8 @@ common in the Linux space.)
 
 ## Configuration
 
-NRemind needs a config file, named `nremind.cfg`. It should be placed in
-the `~/.config/nremind` directory. The program makes provision for
+NRemAdd needs a config file, named `nremadd.cfg`. It should be placed in
+the `~/.config/nremadd` directory. The program makes provision for
 personal and general reminder files. There should be a key in the file for
 each of these. If there is no actual personal reminders file, simply set
 the personal key to the same file as the general key.

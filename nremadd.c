@@ -3,6 +3,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <stdbool.h>
+#include <ctype.h>
 #include <time.h>
 #include "config.h"
 
@@ -22,10 +23,30 @@ struct event {
     char text[51];
 };
 
+bool empty(char *field)
+{
+    char *p;
+    bool status = true;
+
+    if (strlen(field) != 0) {
+        p = field;
+        while (*p != '\0') {
+            if (!isblank(*p)) {
+                status = false;
+                break;
+            }
+        }
+    }
+    return status;
+}
+
 int save_event(struct event *ev)
 {
     FILE *file;
     int result;
+
+    if (empty(ev->date) || empty(ev->text))
+        return -1;
 
     if (ev->personal)
         file = fopen(cfg.personal, "a");

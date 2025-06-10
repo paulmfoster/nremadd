@@ -8,10 +8,14 @@ CFLAGS= -g -Wall -I. -I$(INCPATH)
 LIBS=
 LFLAGS=
 
+DESTDIR=/usr/local/bin
+
 .SUFFIXES:.c
 
 .c.o	:
 	$(CC) -c $(CFLAGS) $(INCDIR) $<
+
+all: nremadd
 
 clean :
 	rm -f *.o core
@@ -25,4 +29,8 @@ nremadd.o : nremadd.c
 nremadd : nremadd.o config.o ini.o
 	$(LINK) $(LFLAGS) -o $@ ini.o config.o nremadd.o -lnewt
 
+install: nremadd
+	sudo cp nremadd $(DESTDIR)
+
+.PHONY: all clean install
 

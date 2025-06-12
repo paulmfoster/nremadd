@@ -26,11 +26,12 @@ config.o : config.h config.c
 
 nremadd.o : nremadd.c
 
-nremadd : nremadd.o config.o ini.o
-	$(LINK) $(LFLAGS) -o $@ ini.o config.o nremadd.o -lnewt
+nremadd : nremadd.o 
+	$(LINK) $(LFLAGS) -o $@ nremadd.o -lnewt
 
 install: nremadd
 	sudo cp nremadd $(DESTDIR)
+	sudo cp remadd $(DESTDIR)
 
 .PHONY: all clean install
 

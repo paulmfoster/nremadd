@@ -4,7 +4,7 @@
 
 PERSFILE='/home/paulf/remind/paulf-only.rem'
 GENFILE='/home/paulf/remind/general.rem'
-EXECFILE='./nremadd'
+EXECFILE='/usr/local/bin/nremadd'
 
 # help
 if ! [ -z $1 ]
